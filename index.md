@@ -6,21 +6,14 @@ layout: home
 
 # 内容目录
 
-下面列出了每个实验室练习和演示的超链接。
+示例文件由 Microsoft Learn 上发布的练习模块中的两个模拟使用，如下所示。
 
-## 实验室
+### 示例文件
+</br>
 
-{% assign labs = site.pages | where_exp:"page", "page.url contains '/Instructions/Labs'" %}
-| 模块 | 实验室 |
-| --- | --- | 
-{% for activity in labs  %}| {{ activity.lab.module }} | [{{ activity.lab.title }}{% if activity.lab.type %} - {{ activity.lab.type }}{% endif %}]({{ site.github.url }}{{ activity.url }}) |
-{% endfor %}
-
-## 演示
-
-{% assign demos = site.pages | where_exp:"page", "page.url contains '/Instructions/Demos'" %}
-| 模块 | 演示 |
-| --- | --- | 
-{% for activity in demos  %}| {{ activity.demo.module }} | [{{ activity.demo.title }}]({{ site.github.url }}{{ activity.url }}) |
-{% endfor %}
+| 模块 | 单元（模拟） | SampleFile |
+| --- | --- | --- |
+| 探索 Microsoft 安全 Copilot 的用例 | 启用自定义插件 | KQL_DefenderExample.yaml |
+| 探索 Microsoft 安全 Copilot 的用例 | 探索以知识库形式进行的文件上传 | Woodgrove Corporate Data Handling Policy.docx |
+| 探索 Microsoft 安全 Copilot 的用例 | 探索以知识库形式进行的文件上传 | Woodgrove Corporate Data Handling Policy.pdf |
 
